@@ -1,30 +1,37 @@
 body {
   box-sizing: border-box;
   display: flex;
-  height: 100vh;
   width: 100vw;
+  height: 100%;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 .container {
   display: flex;
-  height: 90%;
-  width: 70%;
+  height: 100%;
+  width: 100%;
   flex-direction: column;
-  background-color: yellow;
   padding: 40px;
   margin: 70px;
   border-radius: 7px;
+}
+h1 {
+  font-size: 2.4 em;
+}
+p {
+  font-size: 1.2em;
 }
 
 #quote-container {
   margin: 30px;
   width: 900px;
   height: 150px;
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: black;
   border-radius: 10px;
 }
 
@@ -34,17 +41,22 @@ body {
   padding: 10px;
 }
 #quote-button {
-  height: 50px;
-  width: 250px;
-  border-radius: 10px;
-  background-color: grey;
+  height: 100px;
+  font-size: 16px;
+  width: 200px;
+  background-color: green;
+  padding: 10px;
+  border: 1px solid green;
+  border-radius: 5px;
 }
 #extender-container {
-  margin-left: 30px;
+  margin-left: 70px;
   margin-top: 10px;
   width: 900px;
-  height: 80px;
-  border: 1px solid black;
+  height: 100px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border: 2px solid green;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,4 +64,13 @@ body {
   background-color: black;
   border-radius: 10px;
   color: white;
+}
+
+#delete-button {
+  height: 30px;
+  width: 100px;
+  color: black;
+  background-color: green;
+  border: 0;
+  border-radius: 10px;
 }
