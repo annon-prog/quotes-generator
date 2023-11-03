@@ -6,12 +6,10 @@ body {
 }
 .container {
   display: flex;
-  height: 50%;
-  width: 50%;
+  height: 90%;
+  width: 70%;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
+  background-color: yellow;
   padding: 40px;
   margin: 70px;
   border-radius: 7px;
@@ -19,23 +17,39 @@ body {
 
 #quote-container {
   margin: 30px;
-  width: 800px;
-  height: 400px;
+  width: 900px;
+  height: 150px;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: black;
   border-radius: 10px;
 }
 
 #quote-text {
   color: white;
+  font-size: 16px;
   padding: 10px;
 }
 #quote-button {
-  height: 80px;
+  height: 50px;
   width: 250px;
   border-radius: 10px;
   background-color: grey;
+}
+#extender-container {
+  margin-left: 30px;
+  margin-top: 10px;
+  width: 900px;
+  height: 80px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
 }

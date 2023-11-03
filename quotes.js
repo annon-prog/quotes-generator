@@ -1,6 +1,8 @@
 const quoteButton = document.getElementById("quote-button");
-let quoteContainer = document.getElementById("quote-container");
-let quoteText = document.getElementById("quote-text");
+const quoteExtender = document.getElementById("quote-extender");
+const extenderContainer = document.getElementById("extender-container");
+const quoteText = document.getElementById("quote-text");
+const deleteButton = document.getElementById("delete-button");
 
 const quotes = [
   "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
@@ -52,14 +54,42 @@ const quotes = [
 
 const getRandomQuotes = () => {
   let randomIndex = Math.floor(Math.random() * quotes.length);
-  return quotes[randomIndex];
+  let randomQuote = quotes[randomIndex];
+  storeRandomQuotes(randomQuote);
 };
 
-const displayRandomQuotes = () => {
-  let randomQuote = getRandomQuotes();
+const storeRandomQuotes = (randomQuote) => {
+  quoteExtender.innerHTML += `
+  <div id="extender-container">
+  <p id="quote-text">${randomQuote}<p>
+  <button id="delete-button">Delete</button>
+  </div>
+ `;
+};
+
+const deleteQuote = (extenderContainer) => {
+  extenderContainer.remove();
+};
+
+quoteButton.addEventListener("click", getRandomQuotes);
+deleteButton.addEventListener("click", () => deleteQuote(extenderContainer));
+
+/*const storeRandomQuotes = (randomQuote) => {
+  let quoteDiv = document.createElement("div");
+  let quoteText = document.createElement("p");
   quoteText.textContent = randomQuote;
+
+  let deleteButton = document.createElement("button");
+  deleteButton.textContent = "Delete";
+  deleteButton.addEventListener("click", () => deleteQuote(quoteDiv));
+
+  quoteDiv.appendChild(quoteText);
+  quoteDiv.appendChild(deleteButton);
+
+  quoteExtender.appendChild(quoteDiv);
 };
 
-document.addEventListener("DOMContentLoaded", displayRandomQuotes);
-
-quoteButton.addEventListener("click", displayRandomQuotes);
+const deleteQuote = (quoteDiv) => {
+  quoteDiv.remove();
+};
+*/
